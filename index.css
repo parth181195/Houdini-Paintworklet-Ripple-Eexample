@@ -1,6 +1,9 @@
-
 body{
+  margin: 0;
+}
+.wrapper{
   display: flex;
+  --ripple-color: #00000090;
   align-items: center;
   flex-direction: column;
   height: 98vh;
