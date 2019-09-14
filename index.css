@@ -1,0 +1,28 @@
+body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 98vh;
+}
+.target {
+  margin: auto;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 30px;
+  background-color: rgba(137,116,255,1);
+  border-radius: 5px;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.2) ;
+  width: 400px;
+  height: 50px;
+  --ripple-x: 0;
+  --ripple-y: 0;
+  --tick: 1000;
+  --ripple-color: rgba(255,255,255,1);
+  --animation-tick: 0;
+  background-image: paint(ripple);
+}
+
+.target.animating {
+  background-image: paint(ripple);
+}
