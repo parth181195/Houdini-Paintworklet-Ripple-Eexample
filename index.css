@@ -1,3 +1,4 @@
+
 body{
   display: flex;
   align-items: center;
@@ -6,6 +7,7 @@ body{
 }
 .target {
   margin: auto;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   line-height: 50px;
   color: white;
@@ -13,16 +15,9 @@ body{
   background-color: rgba(137,116,255,1);
   border-radius: 5px;
   box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.2) ;
-  width: 400px;
+  width: auto;
+  padding: 10px 40px;
   height: 50px;
-  --ripple-x: 0;
-  --ripple-y: 0;
-  --tick: 1000;
-  --ripple-color: rgba(255,255,255,1);
-  --animation-tick: 0;
-  background-image: paint(ripple);
+  --ripple-color: #ffffffcc;
 }
 
-.target.animating {
-  background-image: paint(ripple);
-}

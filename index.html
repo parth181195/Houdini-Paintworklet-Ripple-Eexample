@@ -6,13 +6,27 @@
   <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./worklet.css">
   <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
-  <div class="target">sd</div>
-  <script>CSS.paintWorklet.addModule('worklet.js');</script>
-  <script src="./index.js" ></script>
+  <h1 style="font-family: 'Montserrat', sans-serif;font-weight: 200">
+    Houdini Paint Worklet Ripple Example
+  </h1>
+  <div class="target ripple">Huge Button With Ripple</div>
+  <div class="details" style="text-align: center; font-family: 'Montserrat', sans-serif;color: #000">
+    <a href="" >
+      <img width="100px" style="margin: auto" src="octocat.jpg" alt="">
+      <br>
+      check it out on github
+    </a>
+  </div>
+  <script>
+    CSS.paintWorklet.addModule('worklet.js');
+  </script>
+  <script src="./index.js"></script>
 </body>
 
 </html>
