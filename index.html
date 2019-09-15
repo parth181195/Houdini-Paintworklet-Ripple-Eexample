@@ -7,9 +7,9 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./worklet.css">
-  <link rel="stylesheet" href="./index.css">
-  <base href="https://parth181195.github.io/Houdini-Paintworklet-Ripple-Eexample/" target="_blank">
+  <link rel="stylesheet" href="worklet.css">
+  <link rel="stylesheet" href="index.css">
+  <base href="https://parth181195.github.io/Houdini-Paintworklet-Ripple-Eexample/">
 </head>
 
 <body>
@@ -26,10 +26,15 @@
       </a>
     </div>
   </div>
-  <script>
-    CSS.paintWorklet.addModule('worklet.js');
+  <script type="text/javascript" >
+    if ('paintWorklet' in CSS) {
+      CSS.paintWorklet.addModule('worklet.js');
+    } else {
+      document.body.innerHTML =
+        'You need support for <a href="https://drafts.css-houdini.org/css-paint-api/">CSS Paint API</a> to view this demo :(';
+    }
   </script>
-  <script src="./index.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>

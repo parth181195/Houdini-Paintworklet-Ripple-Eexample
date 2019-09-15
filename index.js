@@ -1,8 +1,3 @@
-if ('paintWorklet' in CSS) {
-  CSS.paintWorklet.addModule('paintworklet.js');
-} else {
-  document.body.innerHTML = 'You need support for <a href="https://drafts.css-houdini.org/css-paint-api/">CSS Paint API</a> to view this demo :(';
-}
 buttonList = document.querySelectorAll('.ripple');
 let x, y;
 let start = performance.now();
@@ -15,7 +10,6 @@ buttonList.forEach(button => {
     start = performance.now();
     let style = window.getComputedStyle(button);
     let maxTick = style.getPropertyValue('--tick');
-    console.log(maxTick);
     requestAnimationFrame(function animate(now) {
       count = Math.floor(now - start)
       button.style.cssText = `--ripple-x: ${x}; --ripple-y: ${y}; --animation-tick: ${count};`;
